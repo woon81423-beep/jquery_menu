@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/js/jquery-4.0.0.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <p>내용01</p>
+        <button>내용</button>
+      </li>
+      <li>
+        <p>내용02</p>
+        <button>내용</button>
+      </li>
+    </ul>
+    <script>
+      $("li").on("click", function () {
+        $("p").css({"color":"#000"});
+        $(this).children("p").css({ "color": "red" });
+      });
+    </script>
+  </body>
+  <!--
+this를 이용해서 
+--></html>

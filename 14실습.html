@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class 실습</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      ul {
+        list-style: none;
+      }
+      li {
+        width: 50%;
+        height: 70vh;
+        overflow: hidden;
+        position: relative;
+      }
+      img {
+        width: 100%;
+        transition: 0.5s;
+        height: 100%;
+        object-fit: cover;
+      }
+      div {
+        background-color: burlywood;
+        opacity: 90%;
+        color: #fff;
+        position: absolute;
+        bottom:10px;
+        left:7%;
+        width:80%;
+        font-size:0.8rem;
+        padding:10px;
+        
+      }
+      .up{
+        transform:scale(1.2);
+      }
+      .down{
+        color:#000;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Kodak Color</h2>
+    <ul>
+      <li>
+        <img src="img/ko.png" alt="코닥" />
+        <div>
+          <h3>Brown Picks</h3>
+          <p>지금 가장 많이 선택된 클래식 컬러</p>
+        </div>
+      </li>
+    </ul>
+    <script>
+        $("li").on("mouseenter",function(){
+            $("img").addClass("up");
+            $("div").addClass("down");
+        })
+        $("li").on("mouseleave", function(){
+            $("img").removeClass("up");
+            $("div").removeClass("down");
+        })
+    </script>
+  </body>
+</html>

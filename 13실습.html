@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      div {
+        width: 400px;
+        height: 200px;
+        margin: 0px auto;
+        overflow: hidden;
+        border: 1px solid red;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+      }
+      .active {
+        transform: scale(1.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="img/pic1.jpg" alt="술" />
+    </div>
+    <script>
+      $("div").on("mouseenter", function () {
+        $("img").addClass("active");
+      });
+      $("div").on("mouseleave", function () {
+        $("img").removeClass("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      .box01 {
+        width: 500px;
+        height: 200px;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box01">박스</div>
+    <button class="btn01">보이기</button>
+    <button class="btn02">숨기기</button>
+    <button class="btn03">토글</button>
+
+    <script>
+      $(".btn02").on("click", function () {
+        $(".box01").hide(500);
+      });
+
+      $(".btn01").on("click", function () {
+        $(".box01").show(1000);
+      });
+
+      $(".btn03").on("click", function () {
+        $(".box01").toggle();
+      });
+    </script>
+  </body>
+</html>
+<!--
+$("선택자").on("이벤트", function(){
+ 실행문
+})
+
+
+- show(밀리초) :: 보이기
+- hide(밀리초) :: 숨기기
+- toggle(밀리초) :: 하나의 명령어로 두가지 기능을 가지고 있음(show, hide)
+
+1초 :: 1000
+0.5초 :: 500
+
+-->

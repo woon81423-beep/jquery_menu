@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      div {
+        width: 50%;
+        height: 100px;
+        background-color: bisque;
+        display: none; /*자리를 없앰
+        /* opacity:0; 자리가 남음 */
+      }
+    </style>
+  </head>
+  <body>
+    <div>박스</div>
+    <button class="btn01">fadeIn</button>
+    <button class="btn02">fadeOut</button>
+    <button class="btn03">fadeToggle</button>
+    <button class="btn04">fadeTo</button>
+    <script>
+      $(".btn01").on("click", function () {
+        $("div").fadeIn(2000);
+      });
+      $(".btn02").on("click", function () {
+        $("div").fadeOut(1000);
+      });
+      $(".btn03").on("click", function () {
+        $("div").fadeToggle(500);
+      });
+      $(".btn04").on("click", function () {
+        $("div").fadeTo(1000, 0.3);
+      });
+    </script>
+  </body>
+</html>
+<!--
+btn01 버튼을 클릭하면 div가 보여라
+btn02 버튼을 클릭하면 div가 사라져라 
+-->

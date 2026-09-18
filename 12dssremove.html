@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      div {
+        width: 50%;
+        height: 100px;
+        background-color: #ccc;
+      }
+      .on {
+        color: red;
+        background-color: #000;
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>box</div>
+    <button class="btn01">add</button>
+    <button class="btn02">remove</button>
+    <button class="btn03">toggle</button>
+    <script>
+      $(".btn01").on("click", function () {
+        $("div").addClass("on");
+      });
+      $(".btn02").on("click", function () {
+        $("div").removeClass("on");
+      });
+      $(".btn03").on("click", function () {
+        $("div").toggleClass("on");
+      });
+    </script>
+  </body>
+</html>

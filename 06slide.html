@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      div {
+        width: 50%;
+        height: 200px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div>박스</div>
+    <button class="btn01">slideUP</button>
+    <button class="btn02">slideDown</button>
+    <button class="btn03">slideToggle</button>
+    <script>
+      $(".btn01").on("click", function () {
+        $("div").slideUp(1000);
+      });
+      $(".btn02").on("click", function () {
+        $("div").slideDown(1000);
+      });
+      $(".btn03").on("click", function () {
+        $("div").slideToggle(1000);
+      });
+    </script>
+  </body>
+</html>
+
+<!--
+$("선택자").on("이벤트",function(){
+실행문
+})
+
+선택자 : 태그, 클래스명, 아이디명, 위치로
+이벤트 : 클릭, 마우스위치시켰을 때, 스크롤
+
+$("p").on("click", function(){
+이벤트가 발생이 되어야 실행문})
+
+$().on("click")funtion(){
+$("선택자").slideUp() ==>위로 올라가면서 화면에 안보이게 됨
+$("선택자").slideDown() ==>아래로 내려오면서 화면에 보이게 됨
+$("선택자").slideToggle() ==>한가지 버튼으로 2가지 기능(up, down)을 가지고 있음
+})
+
+slideUP() :: ()안에는 밀리초 입력
+만약()안에 입력을 안하면 500(0.5)초임
+1초는 1000
+
+-->

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ul li {
+        transition: 0.4s;
+      }
+      ul li:hover {
+        list-style: circle;
+      }
+      .bg {
+        width: 100%;
+        height: 100vh;
+        background-color: antiquewhite;
+      }
+      .start {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 10px;
+      }
+      .wrap {
+        width: 100%;
+        height: 100vh;
+        background-color: aqua;
+        font-size: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+
+      .wrap ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 20px;
+      }
+
+      .wrap .close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <button class="start">menu</button>
+    </div>
+    <div class="wrap">
+      <ul>
+        <li><a herf="#">창업기</a></li>
+        <li><a herf="#">창업기</a></li>
+        <li><a herf="#">창업기</a></li>
+        <li><a herf="#">창업기</a></li>
+        <li><a herf="#">창업기</a></li>
+      </ul>
+      <button class="close">close</button>
+    </div>
+    <script>
+      $(".start").on("click", function () {
+        $(".wrap").slideDown(1000);
+      });
+      $(".close").on("click", function () {
+        $(".wrap").slideUp(1000);
+      });
+    </script>
+  </body>
+</html>
+<!--
+start버튼을 클릭하면 wrap이 슬라이드 다운해라
+close버튼을 클릭하면 wrap이 슬라이드 업해라
+-->
