@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        word-break: keep-all;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .large {
+        width: 30%;
+        height: 600px;
+        display: flex;
+        margin: 20px auto;
+        /* border: 1px solid red; */
+        position: relative;
+      }
+      .large img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        object-fit: cover;
+      }
+      .large li:nth-of-type(1) img {
+        display: block;
+      }
+      .small {
+        width: 20%;
+        margin: 20px auto;
+        display: flex;
+        gap: 10px;
+      }
+      .small img {
+        width: 100%;
+        display: block;
+      }
+      .on {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="large">
+      <li class="li01"><img src="img/img/디퓨저_1.jpg" alt="" /></li>
+      <li class="li02"><img src="img/img/디퓨저_2.jpg" alt="" /></li>
+      <li class="li03"><img src="img/img/디퓨저_3.jpg" alt="" /></li>
+      <li class="li04"><img src="img/img/디퓨저_4.jpg" alt="" /></li>
+      <li class="li05"><img src="img/img/디퓨저_5.jpg" alt="" /></li>
+    </ul>
+    <ul class="small">
+      <li class="li01"><img src="img/img/디퓨저_1.jpg" alt="" /></li>
+      <li class="li02"><img src="img/img/디퓨저_2.jpg" alt="" /></li>
+      <li class="li03"><img src="img/img/디퓨저_3.jpg" alt="" /></li>
+      <li class="li04"><img src="img/img/디퓨저_4.jpg" alt="" /></li>
+      <li class="li05"><img src="img/img/디퓨저_5.jpg" alt="" /></li>
+    </ul>
+    <script>
+      $(".small .li01").on("click", function () {
+        $(".large li img").hide();
+        $(".large .li01 img").show();
+        $(".small li").removeClass("on");
+        $(".small .li01").addClass("on");
+      });
+      $(".small .li02").on("click", function () {
+        $(".large li img").hide();
+        $(".large .li02 img").show();
+        $(".small li").removeClass("on");
+        $(".small .li02").addClass("on");
+      });
+      $(".small .li03").on("click", function () {
+        $(".large li img").hide();
+        $(".large .li03 img").show();
+        $(".small li").removeClass("on");
+        $(".small .li03").addClass("on");
+      });
+      $(".small .li04").on("click", function () {
+        $(".large li img").hide();
+        $(".large .li04 img").show();
+        $(".small li").removeClass("on");
+        $(".small .li04").addClass("on");
+      });
+      $(".small .li05").on("click", function () {
+        $(".large li img").hide();
+        $(".large .li05 img").show();
+        $(".small li").removeClass("on");
+        $(".small .li05").addClass("on");
+      });
+    </script>
+  </body>
+</html>

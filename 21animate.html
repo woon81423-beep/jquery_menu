@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: tan;
+        border: 0px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>박스</div>
+    <button class="btn01">시작</button>
+    <button class="btn02">초기화</button>
+    <script>
+      $(".btn01").on("click", function () {
+        //순차적으로 적용됨
+        $("div").animate({ height: "200px" }, 2000);
+        $("div").animate({ width: "200px" });
+        $("div").animate({ opacity: "50%" });
+        $("div").animate({ "border-width": "5px" });
+        $("div").animate({ margin: "50px" }); //한줄에 한개씩 입력하면 순차적으로 적용이 됨
+      });
+      //   $(".btn02").on("click",function(){
+      //     $("div").animate({"width":"200px", "height":"200px", "border-width":"5px"},2000,)
+      //   })
+      $(".btn02").on("click", function () {
+        $("div").animate(
+          {
+            width: "100px",
+            height: "100px",
+            opacity: "100%",
+            "border-width": "0px",
+            margin: "0px",
+          },
+          500,
+        );
+      });
+    </script>
+  </body>
+</html>
