@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      ul {
+        width: 90%;
+        display: flex;
+        gap: 10px;
+        list-style: none;
+      }
+      li {
+        width: calc(100% / 4);
+        height: 200px;
+        background-color: orange;
+        position: relative;
+        overflow: hidden;
+      }
+      p {
+        position: absolute;
+        top: 50%;
+        right: -50%;
+        transform: translate(50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><p>list01</p></li>
+      <li><p>list02</p></li>
+      <li><p>list03</p></li>
+      <li><p>list04</p></li>
+    </ul>
+    <script>
+      $("li").on("mouseenter", function () {
+        $(this).children("p").stop().animate({ right: "50%" });
+        // i = $(this).index();
+        // $("p").eq(i).stop().animate({ right: "50%" });
+        // $("p").eq(i).css({ display: "block" });
+      });
+      $("li").on("mouseleave", function () {
+        $(this).children("p").stop().animate({ right: "-50%" });
+      });
+    </script>
+  </body>
+</html>
