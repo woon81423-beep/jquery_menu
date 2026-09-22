@@ -19,6 +19,7 @@
   <body>
     <button class="start">시작</button>
     <button class="reset">초기화</button>
+    <button class="btn">마우스</button>
     <div>박스</div>
     <script>
       $(".start").on("click", function () {
@@ -26,6 +27,12 @@
       });
       $(".reset").on("click", function () {
         $("div").animate({ top: "200px" });
+      });
+      $(".btn").on("mouseenter", function () {
+        $("div").stop().animate({ left: "0px" });
+      });
+      $(".btn").on("mouseleave", function () {
+        $("div").stop().animate({ left: "100px" });
       });
     </script>
   </body>
