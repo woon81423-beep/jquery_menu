@@ -11,34 +11,35 @@
         padding: 0px;
         box-sizing: border-box;
       }
-      ul{list-style: none;}
-      a {
-        color: inherit
+      ul {
+        list-style: none;
       }
-     .wrap01{
-        width:90%;
+      a {
+        color: inherit;
+      }
+      .wrap01 {
+        width: 90%;
         margin: 10px auto;
-        display:flex;
-        gap:10px;
+        display: flex;
+        gap: 10px;
         /* display: none; */
-        /* opacity: 50%; */
         
-     }
-     .wrap02{
-        display:flex;
-        gap:10px;
-        width:30%;
+      }
+      .wrap02 {
+        display: flex;
+        gap: 10px;
+        width: 30%;
         margin: 30px auto;
-
-     }
-     .wrap02 li{
-        width:calc(100% / 4);
-        
-        
-     }
-     img{
-        width:100%;border-radius: 10px;
-     }
+      }
+      .wrap01 li {opacity: 0.5;
+      }
+      .wrap02 li {
+        width: calc(100% / 4);
+      }
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
     </style>
   </head>
   <body>
@@ -75,9 +76,8 @@
     <script>
       $(".wrap02 li").on("click", function () {
         i = $(this).index();
-        // $(".wrap01 li").hide();
-        $(".wrap01 li").fadeTo(300 , 0.5);
-        $(".wrap01 li").eq(i).fadeTo(300 , 1);
+        $(".wrap01 li").fadeTo(200, 0.5);
+        $(".wrap01 li").eq(i).fadeTo(200, 1);
       });
     </script>
   </body>
