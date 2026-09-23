@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      a{
+        color:#fff;
+      }
+      ul li{
+        
+        background-color: rgb(88, 88, 88);
+        width:100px;
+        height:30px;
+      }
+      ul {
+        list-style: none;
+        position: relative;
+      }
+      div {
+        display: flex;
+        gap: 30px;
+      }
+      .list li:nth-of-type(1) {
+        display: none;
+      }
+      .list li:nth-of-type(2) {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul class="menu">
+        <li><a href="#">seoul</a></li>
+        <li><a href="#">Jeju</a></li>
+      </ul>
+      <ul class="list">
+        <li>
+          <img src="img/pic1.jpg" alt="" />
+          <p>seoul</p>
+        </li>
+        <li>
+          <img src="img/pic2.jpg" alt="" />
+          <p>Jeju</p>
+        </li>
+      </ul>
+    </div>
+    <script>
+      $(".menu li").on("click", function () {
+        i = $(this).index();
+        $(".list li").hide();
+        $(".list li").eq(i).show();
+      });
+    </script>
+  </body>
+</html>

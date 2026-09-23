@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <ul class="menu">
+      <li>list01</li>
+      <li>list02</li>
+      <li>list03</li>
+      <li>list04</li>
+    </ul>
+    <ul class="box">
+      <li>box01</li>
+      <li>box02</li>
+      <li>box03</li>
+    </ul>
+    <script>
+      $(".menu li").on("click", function () {
+        i = $(this).index();
+        console.log(i);
+        $(".box li").eq(i).css({ color: "red" });
+      });
+    </script>
+  </body>
+</html>

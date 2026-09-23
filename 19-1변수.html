@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+        *{margin:0px; padding:px;
+        box-sizing: border-box;}
+        ul{
+            list-style:none;          
+        }
+        a{color: inherit;}
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#">list01</a>
+      </li>
+      <li>
+        <a href="#">list02</a>
+        <a href="#">list02</a>
+        <a href="#">list02</a>
+      </li>
+      <li>
+        <a href="#">list03</a>
+      </li>
+      <li>
+        <a href="#">list04</a>
+      </li>
+    </ul>
+    <script>
+    //   num = 52;
+    //   console.log(num);
+    $("li").on("click", function(){
+        $(this).css({"color":"red"});
+        i = $(this).index()
+        console.log(i);
+        $("li").eq(i).css({"color":"red"})
+    })
+    </script>
+  </body>
+</html>

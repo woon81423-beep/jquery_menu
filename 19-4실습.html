@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      ul{list-style: none;}
+      a {
+        color: inherit
+      }
+     .wrap01{
+        width:90%;
+        margin: 10px auto;
+        display:flex;
+        gap:10px;
+        /* display: none; */
+        /* opacity: 50%; */
+        
+     }
+     .wrap02{
+        display:flex;
+        gap:10px;
+        width:30%;
+        margin: 30px auto;
+
+     }
+     .wrap02 li{
+        width:calc(100% / 4);
+        
+        
+     }
+     img{
+        width:100%;border-radius: 10px;
+     }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul class="wrap01">
+        <li>
+          <img src="img/pic1.jpg" alt="" />
+        </li>
+        <li>
+          <img src="img/pic2.jpg" alt="" />
+        </li>
+        <li>
+          <img src="img/pic3.jpg" alt="" />
+        </li>
+        <li>
+          <img src="img/pic4.jpg" alt="" />
+        </li>
+      </ul>
+      <ul class="wrap02">
+        <li>
+          <img src="img/pic1.jpg" alt="" />
+        </li>
+        <li>
+          <img src="img/pic2.jpg" alt="" />
+        </li>
+        <li>
+          <img src="img/pic3.jpg" alt="" />
+        </li>
+        <li>
+          <img src="img/pic4.jpg" alt="" />
+        </li>
+      </ul>
+    </div>
+    <script>
+      $(".wrap02 li").on("click", function () {
+        i = $(this).index();
+        // $(".wrap01 li").hide();
+        $(".wrap01 li").fadeTo(300 , 0.5);
+        $(".wrap01 li").eq(i).fadeTo(300 , 1);
+      });
+    </script>
+  </body>
+</html>
