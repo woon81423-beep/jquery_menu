@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        margin: 0px auto 20px;
+        text-align: center;
+      }
+      .wrap {
+        width: 50%;
+        margin: 10px auto;
+        gap: 10px;
+      }
+      .wrap li {
+        background-color: #ccc;
+      }
+      li {
+        display: flex;
+        gap: 20px;
+      }
+      .scon01 div {
+        background-color: orange;
+        border-radius: 20px;
+        width: 200px;
+        height: 300px;
+      }
+      .scon02 div {
+        background-color: tomato;
+        border-radius: 20px;
+        width: 200px;
+        height: 300px;
+        /* display:none; */
+      }
+      .scon03 div {
+        background-color: rgb(73, 209, 164);
+        border-radius: 20px;
+        width: 200px;
+        height: 300px;
+        /* display:none; */
+      }
+      ul {
+        position: relative;
+      }
+      .scon02 {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="wrap">
+      <li>
+        <button class="btn01">무비차트</button>
+      </li>
+      <li>
+        <button class="btn02">현재상영작</button>
+      </li>
+      <li>
+        <button class="btn03">상영예정</button>
+      </li>
+    </ul>
+    <ul >
+      <li class="scon01">
+        <div>영화</div>
+        <div>영화</div>
+        <div>영화</div>
+      </li>
+      <li class="scon02">
+        <div>영화</div>
+        <div>영화</div>
+        <div>영화</div>
+      </li>
+      <li class="scon03">
+        <div>영화</div>
+        <div>영화</div>
+        <div>영화</div>
+      </li>
+    </ul>
+    <script>
+      $(".btn01").on("click", function () {
+        $(".scon01").show(0);
+        $(".scon02").hide(0);
+        $(".scon03").hide(0);
+      });
+      $(".btn02").on("click", function () {
+        $(".scon02").show(0);
+        $(".scon01").hide(0);
+        $(".scon03").hide(0);
+      });
+      $(".btn03").on("click", function () {
+        $(".scon03").show(0);
+        $(".scon01").hide(0);
+        $(".scon02").hide(0);
+      });
+    </script>
+  </body>
+</html>
