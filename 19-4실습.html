@@ -23,7 +23,6 @@
         display: flex;
         gap: 10px;
         /* display: none; */
-        
       }
       .wrap02 {
         display: flex;
@@ -31,7 +30,8 @@
         width: 30%;
         margin: 30px auto;
       }
-      .wrap01 li {opacity: 0.5;
+      .wrap01 li {
+        opacity: 0.5;
       }
       .wrap02 li {
         width: calc(100% / 4);
@@ -76,8 +76,10 @@
     <script>
       $(".wrap02 li").on("click", function () {
         i = $(this).index();
-        $(".wrap01 li").fadeTo(200, 0.5);
-        $(".wrap01 li").eq(i).fadeTo(200, 1);
+        // $(".wrap01 li").fadeTo(200, 0.5);
+        // $(".wrap01 li").eq(i).fadeTo(200, 1);
+        $(".wrap01 li").animate({ opacity: "0.5" });
+        $(".wrap01 li").eq(i).animate({ opacity: "1" });
       });
     </script>
   </body>

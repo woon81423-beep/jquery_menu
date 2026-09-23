@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .wrap {
+        background-color: #ccc;
+        width: 600px;
+        height: 400px;
+        margin: 50px auto;
+        position: relative;
+      }
+      .wrap .top {
+        width: 0%;
+        height: 1%;
+        background-color: #000;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+      .wrap .right {
+        width: 1%;
+        height: 0%;
+        background-color: #000;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+      .wrap .bottom {
+        width: 0%;
+        height: 1%;
+        background-color: #000;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+      }
+      .wrap .left {
+        width: 1%;
+        height: 0%;
+        background-color: #000;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top"></div>
+      <div class="right"></div>
+      <div class="bottom"></div>
+      <div class="left"></div>
+    </div>
+
+    <script>
+      $(".top").stop().animate({ width: "100%" });
+      $(".right").animate({ height: "100%" });
+      $(".bottom").animate({ width: "100%" });
+      $(".left").animate({ width: "100%" });
+    </script>
+  </body>
+</html>
