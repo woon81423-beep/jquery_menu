@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 20px;
+      }
+
+      li {
+        width: 100px;
+        height: 50px;
+        /* background-color: aquamarine; */
+        text-align: center;
+        line-height: 50px;
+        position: relative;
+        cursor: pointer;
+        border-radius: 40px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        transition: 0.3s;
+      }
+      li:hover {
+        color: #fff;
+      }
+
+      .bg {
+        width: 100px;
+        height: 50px;
+        background-color: tomato;
+        /* transform: translateX(100%); */
+        display: inline-block;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        display: none;
+        z-index: -1;
+      }
+      .bg02 {
+        width: 100px;
+        height: 50px;
+        background-color: teal;
+        /* transform: translateX(100%); */
+        display: inline-block;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        display: none;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="wrap01">
+      <li>
+        <p>contect</p>
+        <div class="bg"></div>
+      </li>
+      <li>
+        <div class="bg02"></div>
+        <p>wedding</p>
+      </li>
+    </ul>
+    <script>
+      $("li:nth-of-type(1)").on("mouseenter", function () {
+        $(".bg").stop().slideDown(500);
+      });
+      $("li:nth-of-type(1)").on("mouseleave", function () {
+        $(".bg").stop().slideUp(500);
+      });
+      $("li:nth-of-type(2)").on("mouseenter", function () {
+        $(".bg02").stop().slideDown(500);
+      });
+      $("li:nth-of-type(2)").on("mouseleave", function () {
+        $(".bg02").stop().slideUp(500);
+      });
+    </script>
+  </body>
+</html>
