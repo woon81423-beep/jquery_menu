@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num1 = 20;
+      let num2 = 20;
+      if (num1 == num2) {
+        console.log(`두 숫자가 같습니다.`);
+      } else {
+        console.log(`두 숫자가 다릅니다`);
+      }
+
+      let num3 = 20;
+      let num4 = 10;
+      if (num3 != num4) {
+        console.log(`두 숫자가 다릅니다.`);
+      } else {
+        console.log(`두 숫자가 같습니다`);
+      }
+
+      const coffeeprice = 4500;
+      const discount = 2000;
+      let coffeecount = 3;
+      let finalprice = coffeeprice * coffeecount - discount;
+      document.write(
+        `아메리카노 ${coffeecount}잔의 최종 결제 금액은 ${finalprice}원 입니다.`,
+      );
+
+      const moveprice = 14000;
+      const popcorn = 10000;
+      let count2 = 1;
+      let count = 4;
+      let finalprice2 = moveprice * count + popcorn;
+      document.write(
+        `영화표 ${count}장과 팝콘 ${count2}개의 가격은 ${finalprice2}입니다.`,
+      );
+      document.write(`한명당 내야하는 가격은 ${finalprice2 / 4}입니다.`);
+
+      const peopleprice = 10000;
+      let time = 8;
+      let daypay = peopleprice * time;
+      daypay += 3000;
+      document.write(`오늘의 총 일당은 ${daypay}입니다.`);
+
+      let doll = 23;
+      let box = 5;
+      let perpectbox = doll / box;
+    </script>
+  </body>
+</html>

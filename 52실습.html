@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .wrap01 {
+        height: 2000px;
+        background: linear-gradient(tomato, #000);
+      }
+      .btn {
+        position: fixed;
+        bottom: 100px;
+        right: 100px;
+        padding: 10px;
+        background-color: orange;
+        display: none;
+      }
+      .btn.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap01">페이지</div>
+    <button class="btn">push</button>
+    <script>
+      //스크롤을 했을 때 스크롤값이 500이상 내려가면 위로 올라가는 버튼을 보이게 만듬
+      $(window).on("scroll", function () {
+        let pos = $(this).scrollTop();
+        if (pos >= 500) {
+          //   $(".btn").show();
+          // } else {
+          //   $(".btn").hide();
+          // }
+
+          $(".btn").addClass("on");
+        } else {
+          $(".btn").removeClass("on");
+        }
+      });
+      $(".btn").on("click", function () {
+        $("html").animate({ scrollTop: "0px" });
+      });
+    </script>
+  </body>
+</html>

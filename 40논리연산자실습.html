@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = 22;
+        let money = 3000;
+        if(age >= 20 && money >= 5000){
+            console.log("입장가능")
+        }else{
+            console.log("입장불가능")
+        }
+
+        const id = "admin";
+        let password = "a123";
+        if(id == "admin" && password == "a123"){
+            console.log("로그인성공")
+        }else{
+            console.log("로그인실패")
+        }
+
+        let age1 = 50;
+        if(age1 <=19 || age1 >=65){
+            console.log("할인대상입니다")
+        }else{
+            console.log("할인대상이 아닙니다")
+        }
+    </script>
+</body>
+</html>
+<!--
+==>나이가 20세 이상이고 돈이 5000이상이면 "입장가능"
+==>아이디와 비밀번호가 둘 다 true여야 로그인 성공
+==>나이가 19세 이하 또는 65세 이상이면 할인대상입니다.-->

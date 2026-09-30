@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let result1 = 2 < 3 //true
+        let result2 = 30 > 50 //false
+        let result3 = 30 < 50 //true
+        let result4 = 2 > 3 //false
+
+            console.log(`${result1 && result2} <br> `)
+            console.log(`${result1 && result3} <br> `)
+            console.log(`${result1 || result2} <br> `)
+            console.log(`${result2 || result3} <br> `)
+            console.log(`${result2 || result4} <br> `)
+            console.log(`${result1 || result2} <br> `)
+            console.log(`${!result1}<br>`)
+    </script>
+</body>
+</html>
+<!--
+*논리연산자
+&& : : and 연산자 (그리고) 둘다 참이면 결과값이 참이 나옴.
+if( 2 > 1 && 5 > 2 ) 이 외 나머지는 거짓이 됨.
+
+|| ::or 연산자(또는) 둘다 거짓이면 거짓이 나옴. 나머지는 참이 됨.
+if( 2 > 5 || 5 > 2 ) 나머지는 참이 됨.
+! :: not 연산자. 무조건 반대로 나옴. 참이면 거짓으로 나오고 거짓이면 참으로 나옴.
+-->

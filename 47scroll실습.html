@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      $(window).on("scroll", function () {
+        let pos = $(this).scrollTop();
+        // console.log(pos);
+        if (pos >= 300) {
+          $("body").css({ "background-color": "#ccc" });
+        } else if (pos < 300) {
+          $("body").css({ "background-color": "orange" });
+        }
+      });
+    </script>
+  </body>
+</html>

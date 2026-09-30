@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .con01 {
+        height: 2000px;
+        background: linear-gradient(tomato, pink);
+      }
+      .btn {
+        position: fixed;
+        right: 100px;
+        bottom: 100px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con01">페이지</div>
+    <button class="btn">TOP</button>
+
+    <script>
+        //버튼을 누르면 맨 위로 올라감
+      $(".btn").on("click", function () {
+        $(window).scrollTop(0);
+      });
+
+        //버튼을 누르면 맨 위로 올라가는데 500밀리초에 걸쳐서 부드럽게 올라감
+        //선택자는 html과 혹시 모르니 body
+    $(".btn").on("click",function(){
+        $("html, body").animate({"scrollTop":"0px"}, 500)
+    })
+
+    </script>
+  </body>
+</html>

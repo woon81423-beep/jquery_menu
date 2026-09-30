@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      section {
+        width: 100%;
+        height: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .con01 {
+        background-color: orange;
+      }
+      .con02 {
+        background-color: tomato;
+      }
+      p {
+        font-size: 40px;
+      }
+      .con02 p {
+        transform: translateX(150px);
+        transition: 2s;
+      }
+      .on p {
+        transform: translateX(0);
+        opacity:1;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="con01"><p>con01</p></section>
+    <section class="con02"><p>con02</p></section>
+  </body>
+  <script>
+    // 스크롤을 했을 때 스크롤 값이 con02의 y위치보다 크면 p를 위로 이동시킴
+    $(window).on("scroll", function () {
+      let wrap02 = $(window).scrollTop();
+      let wrap01 = $(".con02").offset().top;
+// if문 가로안에 +나 - 를 이용하여 실행될값을 조정가능함
+      if (wrap01 > wrap02 - 300) {
+        $(".con02").addClass("on");
+      }else{
+        $(".con02").removeClass("on");
+      }
+    });
+  </script>
+</html>

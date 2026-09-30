@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        height: 2000px;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        position: absolute;
+        left: 100px;
+        top: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      $(window).on("scroll", function () {
+        let sc = $(this).scrollTop();
+        //    console.log(sc)
+        if (sc >= 300) {
+          $("div").stop().animate({ left: "400px" });
+        } else {
+          $("div").stop().animate({ left: "100px" });
+        }
+      });
+    </script>
+  </body>
+</html>

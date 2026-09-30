@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script>
+        $(window).on("scroll", function(){
+            let pos = $(this).scrollTop();
+            console.log(pos);
+        })
+    </script>
+  </body>
+</html>
+<!--
+
+*scroll
+scroll 이벤트는 홈페이지를 스크롤 할 때마다 실행이 되는 이벤트.
+$(window).on("scroll",function(){
+실행문
+})
+scrollTop() :: 수직(세로) 스크롤바 위치를 알 수 있음
+scrollLeft() :: 수평(가로) 스크롤바 위치를 알 수 있음
+-->

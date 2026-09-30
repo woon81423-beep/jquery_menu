@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      section {
+        width: 100%;
+        height: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .con01 {
+        background-color: pink;
+      }
+
+      .con02 {
+        background-color: yellow;
+      }
+      p {
+        font-size: 40px;
+      }
+      .con02 p {
+        transform: translateY(50px);
+        transition: 1s;
+        opacity: 0;
+      }
+
+      .con02.on p {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .con01 p {
+        transform: translateX(100px);
+        transition: 1s;
+        opacity: 0;
+      }
+      .con01.on p {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="con01">
+      <p>con01</p>
+    </section>
+    <section class="con02">
+      <p>con02</p>
+    </section>
+    <script>
+      $(Window).on("scroll", function () {
+        let sc = $(window).scrollTop();
+        // console.log(sc);
+
+        let pos01 = $(".con01").offset().top;
+        if (sc >= pos01 + 300) {
+          $(".con01").addClass("on");
+        } else {
+          $(".con01").removeClass("on");
+        }
+
+        let pos = $(".con02").offset().top;
+        // console.log(pos);
+        if (sc >= pos - 300) {
+          $(".con02").addClass("on");
+        } else {
+          $(".con02").removeClass("on");
+        }
+      });
+    </script>
+  </body>
+</html>
+<!--
+==> 스크롤을 했을때
+스크롤값이 con02의 y위치값 보다  크면
+p를 위로 이동시킴
+-->

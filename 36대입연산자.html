@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = 5;
+      document.write(
+        "num변수에 3을 더해서 num변수에 넣으면" + (num += 3) + "<br>",
+      );
+      document.write(
+        "num변수에 4를 빼서 num변수에 넣으면" + (num -= 4) + "<br>",
+      );
+      document.write(
+        `num변수에 4을 빼서 num변수에 넣으면  ${(num -= 2)}  <br>`,
+      );
+      document.write(
+        `num변수에 3을 곱해서 num변수에 넣으면 ${(num *= 3)}  <br>`,
+      );
+      document.write(
+        `num변수에 3으로 나눠서 num변수에 넣으면 ${(num /= 3)}  <br>`,
+      );
+      document.write(
+        `num변수에 3을 나눈 나머지를 num변수에 넣으면 ${num % 3} <br>`,
+      );
+    </script>
+  </body>
+</html>
+<!--
+*대입연산자
+연산을 한 후 대입을 시키겠다 라는 의미
+
+num변수가 두번 나오면 한번으로 줄여서 씀
+왼쪽 ==> 오른쪽 (왼쪽에 있는것을 줄여서 오른쪽처럼 사용함)
+
+num = num + 1 ==> num +=1
+num = num - 1 ==> num -=1
+num = num * 1 ==> num*=1
+num = num / 1 ==> num /=1
+num = num % 1 ==> num %=1-->
