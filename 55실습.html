@@ -151,12 +151,12 @@
         // console.log(sc);
         let pg02 = $("#page02").offset().top;
         let pg03 = $("#page03").offset().top;
-        if (sc > pg02) {
+        if (sc >= pg02 - 200) {
           $("#page02").addClass("on");
         } else {
           $("#page02").removeClass("on");
         }
-        if (sc > pg03) {
+        if (sc >= pg03 - 200) {
           $("#page03").addClass("on");
         } else {
           $("#page03").removeClass("on");
