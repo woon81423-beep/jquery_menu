@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/69내용추가.js"></script>
+  </head>
+  <body>
+    <div>앞 또는 뒤에 추가</div>
+    <button class="pre">앞에 추가</button>
+    <button class="app">뒤에 추가</button>
+  </body>
+</html>
+<!--
+*내용추가
+-prepend() : 선택한 요소 앞에 내용을 추가
+-append() : 선택한 요소 뒤에 내용을 추가
+$("추가할 곳").prepend("추가할 내용")
+$("추가할 곳").append("추가할 내용")
+
+-내부js:: </body>위에 <script>를 선언하고 그 안에 제이쿼리 내용을 입력함
+-외부js:: js파일을 따로 저장. 그리고 나서 <head>안에 <script>밑에 내가 만든 js를 <script src="js가 있는 경로설정">을 연결함
+-경로설정은 html문서를 기준으로 경로를 입려하면 됨
+-외부 js에는 $(function(){
+}) 을 먼저 선언하고 사용해야 함.
+-{}중괄호 안에 제이쿼리를 입력함
+
+-prependTo() :: prepend와 같은 의미로 앞에 추가
+$("추가할 내용").perpendTo("추가할곳")
+-appendTo() ::append와 같은 의미로 뒤에 추가
+$("추가할 내용").appendTo("추가할곳")
+
+-->

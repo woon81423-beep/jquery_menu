@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-4.0.0.min.js"></script><script src="js/68.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      div {
+        width: 400px;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid red;
+        margin: 10px auto;
+
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        transition: 1s;
+      }
+      li {
+        width: 400px;
+        height: 200px;
+        left: 0%;
+        top: 0%;
+      }
+    
+      i{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        cursor: pointer;
+        padding: 5px;
+      }
+      .prev{
+         left: 20px
+      }
+      .next{
+      right:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li><img src="img/pic1.jpg" alt="" /></li>
+        <li><img src="img/pic2.jpg" alt="" /></li>
+        <li><img src="img/pic3.jpg" alt="" /></li>
+        <li><img src="img/pic4.jpg" alt="" /></li>
+      </ul>
+      <i class="fa-solid fa-chevron-right next"></i>
+      <i class="fa-solid fa-chevron-left prev"></i>
+   
+  </body>
+</html>

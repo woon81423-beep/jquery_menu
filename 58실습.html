@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num01 = Number(prompt("국어점수를 입력하세요"));
+      let num02 = Number(prompt("수학점수를 입력하세요"));
+      let total = (num01 + num02) / 2;
+     
+        if (total >= 80) {
+          console.log(`평균이 ${total}점 이네요 아주잘했어요`);
+        } else if (total >= 60) {
+          console.log(`평균이 ${total}점 이네요ㅋ 잘했어요`);
+        } else {
+          console.log(`평균이 ${total}점 이네요ㅋㅋ`);
+        }
+     
+    </script>
+  </body>
+</html>
+<!--
+-prompt로 입력을 받으면
+문자로취급이 되므로 연산이 되지 않고 결합이 됨
+-연산을 하려면 숫자로 변경해야함
+-숫자로 변경을 하려면 Number(prompt("원하는 메시지"))
+-->

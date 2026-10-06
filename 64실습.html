@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let total = 0;
+      for (let i = 1; i <= 10; i++) {
+        total = total + i;
+        // console.log(`1부터 ${i}까지의 합계는 ${total}이다`);
+      }
+      console.log(total);
+
+      let total01 = 0;
+      for (let e = 1; e <= 10; e++) {
+        if (e % 2 == 0) {
+          total01 = total01 + e;         
+        }
+      }
+      console.log(total01);
+
+      let total02 = 0;
+      for (let d = 1; d <= 10; d++) {
+        if (d % 2 == 1) {
+             total02 = total02 + d;
+        }
+      }
+        console.log(total02);
+    </script>
+  </body>
+</html>
+<!--
+1.1부터 10까지의 합계
+2.1부터 10까지의 짝수 합계
+3.1부터 10까지의 홀수 합계
+-->

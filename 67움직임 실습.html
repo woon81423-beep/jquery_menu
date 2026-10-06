@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      div {
+        width: 400px;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid red;
+        margin: 10px auto;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        transition: 1s;
+      }
+      li {
+        width: 400px;
+        height: 200px;
+        left: 0%;
+        top: 0%;
+      }
+      .wrap {
+        left: -400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li><img src="img/pic1.jpg" alt="" /></li>
+        <li><img src="img/pic2.jpg" alt="" /></li>
+        <li><img src="img/pic3.jpg" alt="" /></li>
+        <li><img src="img/pic4.jpg" alt="" /></li>
+      </ul>
+    </div>
+    <script>
+      let count = $("li").length;
+      console.log(count);
+
+      for (let i = 0; i < count; ++i) {
+        $("li")
+          .eq(i)
+          .on("click", function () {
+            if (i == 3) {
+              $("ul").stop().animate({ "margin-left": "0px" });
+            } else {
+              $("ul")
+                .stop()
+                .animate({ "margin-left": `${-400 *(i+1)}` });
+            }
+          });
+      }
+
+      //==============================================================
+      // $("ul").on("click",function(){
+      //   $("ul").stop().animate({"margin-left":"-400px"})
+      // })
+
+      // for (let i = 0; i <= 3; ++i) {
+      //   $("li").on("click", function () {
+      //     $("li").eq(i).stop().animate({ "margin-left": "-350px" });
+      //     $("li:nth-of-type(4)").eq(i).stop().animate({ "margin-left": "0px" });
+      //   });
+      // }
+      //==============================================================
+      // $("li").on("click", function () {
+      //   let i = $(this).index();
+
+      // console.log(i)
+
+      // if (i == 3) {
+      //   $("ul").stop().animate({ "margin-left": "0px" });
+      // } else {
+      //   $("ul")
+      //     .stop()
+      //     .animate({ "margin-left": -400 * (i + 1) + "px" });
+      // }
+
+      //백틱을 이용해만들기
+      //   if (i == 3) {
+      //     $("ul").stop().animate({ "margin-left": "0px" });
+      //   } else {
+      //     $("ul")
+      //       .stop()
+      //       .animate({ "margin-left": `${-400 * (i + 1)}` });
+      //   }
+      // });
+    </script>
+  </body>
+</html>
+<!--
+1.제이쿼리 움직임은 규칙이 있다. 
+그 규칙을 찾아서 공식으로 만듬.
+
+2.규칙을 찾았지만 예외가 발생이 됨.
+그 예외는 if문에 조건으로 넣으면 됨
+
+if(예외조건){
+실행문}
+}else{
+공통 실행문(규칙을 허용)
+}
+-->
+<!--
+첫번째 이미지를 (0번째 자리)클릭하면 ul이 -300px 이동
+두번째 이미지를 (0번째 자리)클릭하면 ul이 -600px 이동
+세번째 이미지를 (0번째 자리)클릭하면 ul이 -900px 이동
+
+0번째는 (0 + 1) * -300
+1번째는 (1 + 1) * -300
+-->
