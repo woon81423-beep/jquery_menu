@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: teal;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div>box</div>
+    <script>
+      $("div").animate({ left: "300px" }, 500, function () {
+        $("div").css({ "background-color": "red" });
+      });
+    </script>
+  </body>
+</html>

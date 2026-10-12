@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <h2 class="count">0</h2>
+    
+    <script>
+      let num = 0;
+      let stop = setInterval(function () {
+        num = num + 33;
+        $(".count").text(num);
+        if (num >= 1000) {clearInterval(stop);
+        }  
+      }, 100);
+
+      //   let num = 1;
+      //   let stop = setInterval(function () {
+      //     $(".count").text(num);
+      //     num = num + 1;
+      //   }, 1000);
+    </script>
+  </body>
+</html>
+<!--
+*setinterval로 제작하는 것:
+1초마다 숫자가 1씩 증가됨.
+정지버튼을 클릭하면 정지
+
+>숫자가 10이 되면 정지시킴
+-->

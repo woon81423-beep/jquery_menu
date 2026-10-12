@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: palevioletred;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <button>정지</button>
+
+    <script>
+      let color = 0;
+      let stop = setInterval(function () {
+        if (color == 0) {
+          $("div").css({ "background-color": "lightblue" });
+          color = 1;
+        } else {
+          $("div").css({ "background-color": "palevioletred" });
+          color = 0;
+        }
+      }, 2000);
+
+      $("button").on("click", function () {
+        clearInterval(stop);
+      });
+    </script>
+  </body>
+</html>
+<!--
+color 가 0일때 setInterval로 들어가서 0이기 때문에 if> 색이 라이트블루가 되고 color은 1이 되어서 빠져나감
+2초뒤에 color = 1 이 setInterval로 들어가서 1이기때문에 else로 들어가 핑크색이되고 color = 0이 되어 빠져나감.2초뒤 반복.
+-->

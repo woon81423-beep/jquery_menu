@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <button>더하기</button>
+    <div></div>
+    
+    <script>
+        
+      function wrap(a, b) {
+        // console.log(a, b);
+        let reault = a + b;
+        let reault02 = a - b;
+        let reault03 = a * b;
+        let reault04 = a / b;
+        $("div").text(`덧셈${reault}뺄셈${reault02}곱셈${reault03}나눗셈${reault04}`);
+      }
+      $("button").on("click", function () {
+        wrap(20, 10);
+      });
+    </script>
+  </body>
+</html>
+<!--
+
+-->

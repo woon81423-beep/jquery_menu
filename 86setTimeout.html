@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+</head>
+<body>
+    <p>4초 후 사라짐</p>
+
+    <script>
+        // $("p").fadeOut()
+        setTimeout(function(){
+            $("p").fadeOut()
+        },4000)
+    </script>
+</body>
+</html>
+<!--
+*setTimeout(함수, 밀리초)
+밀리초가 지난 후에 함수를 한 번 실행
+
+이벤트가 없어도 되는것도 있음
+-->

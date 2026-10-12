@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      ul {
+        list-style: none;
+        display: flex;
+        width: 100%;
+        text-align: center;
+      }
+      li {
+        width: calc(100% / 3);
+        height: 40px;
+        line-height: 40px;
+      }
+      li:nth-of-type(1),
+      li:nth-of-type(3) {
+        background-color: #ccc;
+      }
+      li:nth-of-type(2) {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>공지사항</li>
+      <li>공지내용<h2 class="count">0</h2></li>
+      <li>더보기</li>
+    </ul>
+    <script>
+      let i = 1;
+      setInterval(function () {
+        i = ++i;
+        if (i < 5) {
+          i = 1;
+          console.log(i)
+        }
+        $("li:nth-of-type(2)").attr("li",`공지내용${i}`);
+      }, 2000);
+
+
+   
+      let num = 0;
+      let stop = setInterval(function () {
+        num = num + 33;
+        $(".count").text(num);
+        if (num >= 1000) {clearInterval(stop);
+        }  
+      }, 100);
+
+    </script>
+  </body>
+</html>
