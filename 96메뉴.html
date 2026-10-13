@@ -46,25 +46,48 @@
       </div>
 
       <script>
-        function res() {
-          let w = $(window).width();
-          console.log(w);
-          $("i").on("click", function () {
-            if (w >= 1200) {
-            } else {
-              $("ul").slideToggle();
-              //   $("ul").css({ right: "0%" });
-              $(".close").css({ display: "block" });
-              $(".bar").css({ display: "none" });
+        $(function () {
+          function res() {
+            let w = $(window).width();
+            if (w < 1200) {
+              $(".bar").on("click", function () {
+                $("nav").animate({ right: "20px" });
+                $(".bar").hide();
+                $(".close").show();
+              });
+
+              $(".close").on("click", function () {
+                $("nav").animate({ right: "-500px" });
+                $(".bar").show();
+                $(".close").hide();
+              });
             }
-          });
-        }
-
-        res();
-
-        $(window).on("resize", function () {
+          }
           res();
+          $(window).on("resize", function () {
+            res();
+          });
         });
+
+        // function res() {
+        //   let w = $(window).width();
+        //   console.log(w);
+        //   $("i").on("click", function () {
+        //     if (w >= 1200) {
+        //     } else {
+        //       $("ul").slideToggle().css({"display":"block"});
+        //       //   $("ul").css({ right: "0%" });
+        //       $(".close").css({ display: "block" });
+        //       $(".bar").css({ display: "none" });
+        //     }
+        //   });
+        // }
+
+        // res();
+
+        // $(window).on("resize", function () {
+        //   res();
+        // });
       </script>
     </header>
   </body>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/97style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/egjs-jquery-transform/2.0.0/transform.min.js"
+      integrity="sha512-vOc3jz0QulHRiyMXfp676lHxeSuzUhfuw//VUX12odAmlUbnKiXH4GQxBRqwKhF3Mkswqr5ILY9MtEM4ZwcS2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul class="ft">
+        <li>
+          <a href="#" class="wrap01">여행가이드 소개</a>
+        </li>
+        <li>
+          <a href="#" class="wrap02">국내여행지</a>
+          <ul class="sub">
+            <li><a href="#">경기/강원</a></li>
+            <li><a href="#">충청도</a></li>
+            <li><a href="#">전라도</a></li>
+            <li><a href="#">경상도</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="wrap03">해외여행지</a>
+          <ul class="sub">
+            <li><a href="#">동남아</a></li>
+            <li><a href="#">남태평양</a></li>
+            <li><a href="#">유럽</a></li>
+            <li><a href="#">남극</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      $(function () {
+        $(".ft > li").on("click", function () {
+          $(".ft > li").css({ "background-color": " aquamarine;" });
+          $(".sub").css({ "background-color": "tomato" });
+          $(".sub").hide();
+          $(this).find(".sub").show();
+        });
+      });
+    </script>
+  </body>
+</html>

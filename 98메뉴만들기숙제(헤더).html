@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/98style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="#"><img src="img/logo.svg" alt="로고" /></a>
+      </h1>
+      <nav>
+        <ul class="gnb">
+          <li><a href="#">Vsion</a></li>
+          <li><a href="#">Technology</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Cases</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </nav>
+      <div class="lnb">
+        <ul class="lang">
+          <li>KR</li>
+          <li>EN</li>
+        </ul>
+        <div class="contact">
+          <div class="bg"></div>
+          <div class="left"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="us">Contact Us</div>
+          <div class="right"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="bar">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+    <div id="visual"></div>
+
+    <script>
+      $(".contact").on("mouseenter", function () {
+        $(".contact").addClass("active");
+      });
+      $(".contact").on("mouseleave", function () {
+        $(".contact").removeClass("active");
+      });
+
+      //햄버거바+반응형 메뉴
+      $(".bar").on("click", function () {
+        $("header").toggleClass("menu-open");
+      });
+
+      let last = 0; //과거스크롤값
+      let current = 0; //현재스크롤
+
+      $(window).on("scroll", function () {
+        current = $(this).scrollTop();
+
+        if (current > last) {
+          $("header").stop().animate({ top: "-100px" });
+        } else {
+          $("header").stop().animate({ top: "0px" });
+          last = current;
+        }
+      });
+    </script>
+  </body>
+</html>
