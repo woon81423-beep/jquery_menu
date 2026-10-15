@@ -28,16 +28,17 @@ $(function () {
 
   $(".prev").on("click", function () {
     clearInterval(stop);
-
+let i = $(`.panel li`).index();
+i = 1
     if (i == 0) {
       i = total - 1;
     } else {
       i = i - 1;
     }
     $(".panel li:last-child").prependTo(".panel");
-    $(".panel").css({ "margin-left": `${-w}px` });
+    $(".panel").css({ "margin-left": `${-w}px` });$(".panel li p").css({ top: "60%", opacity: "0" });
     $(".panel").animate({ "margin-left": "0px" });
-    $(".panel li p").css({ top: "60%", opacity: "0" });
+    
     $(".panel li").eq(i).find("p").animate({ top: "50%", opacity: "1" });
     start();
   });
