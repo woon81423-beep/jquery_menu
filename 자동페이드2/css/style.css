@@ -1,0 +1,94 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.slide {
+  width: 100%;
+  height: 500px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.panel {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+
+  position: relative;
+}
+
+.panel li {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 0px;
+  top: 0p;
+  display: none;
+}
+.panel .bg1 {
+  background-image: url(../img/pic1.jpg);
+  display: block;
+}
+.panel .bg2 {
+  background-image: url(../img/pic2.jpg);
+}
+.panel .bg3 {
+  background-image: url(../img/pic3.jpg);
+}
+.panel .bg4 {
+  background-image: url(../img/pic4.jpg);
+}
+
+.panel p {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*화살표*/
+.arr li {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: #fff;
+}
+.arr .prev {
+  left: 10px;
+}
+.arr .next {
+  right: 10px;
+}
+
+/*navi*/
+.navi {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 10px;
+}
+.navi li {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+.navi li.on {
+  background-color: #f00;
+}
