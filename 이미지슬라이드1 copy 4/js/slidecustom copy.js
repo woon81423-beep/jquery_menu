@@ -64,12 +64,11 @@ $(function () {
 
     i--;
     if (i < 0) {
-      $(".panel").css({ "margin-left": `-${i * w}px` });
+      $(".panel").css({ "margin-left": `${-(total - 1) * w}px` });
       $(".panel")
         .stop()
-        .animate({ "margin-left": `${(i - 2) * w}px` });
-
-      i = 3;
+        .animate({ "margin-left": `${-(total - 2) * w}px` });
+      i = total - 2;
     } else {
       $(".panel")
         .stop()
