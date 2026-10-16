@@ -1,7 +1,8 @@
 $(function () {
   let i = 0;
   let total = $(".panel li").length;
-  console.log(total);
+  $(".panel li").find("p").eq(0).addClass("piz");
+  // console.log(total);
   function navi() {
     $(".navi li").removeClass("on");
     $(".navi li").eq(i).addClass("on");
