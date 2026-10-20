@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      .box01 {
+        background-color: aquamarine;
+      }
+      .box02 {
+        background-color: rgb(255, 157, 36);
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button>실행</button>
+    <div class="box01">박스1</div>
+    <div class="box02">박스2</div>
+    <script>
+      $("button").on("click", function () {
+        $(".box01").hide(1000, function () {
+          $(".box02").css({ display: "block" });
+        });
+      });
+    </script>
+  </body>
+</html>

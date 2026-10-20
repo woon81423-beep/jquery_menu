@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <img src="img/pic1.jpg" alt="" class="box" />
+    <button>중지</button>
+    <script>
+      let i = 1;
+      let stop = setInterval(function () {
+        if (i == 4) {
+          i = 1;
+        } else {
+          i = i + 1;
+        }
+        $("img").attr({ src: `img/pic${i}.jpg` });
+      },1000);
+      $("button").on("click",function(){
+        clearInterval(stop);
+      })
+
+    </script>
+  </body>
+</html>
+<!--
+이미지 자동변경
+attr:: 속성값을 변경할 때 사용함
+$("선택자").attr("속성":"새로운 속성값")
+
+1.변수 i가 1일때  i가 4보다 작다면 i는 1로 돌아감. 
+attr 로 사용하여 pic1~pic4로 변경되어 이미지가 교체되게 함
+
+-->

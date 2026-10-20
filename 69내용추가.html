@@ -32,4 +32,21 @@ $("추가할 내용").perpendTo("추가할곳")
 -appendTo() ::append와 같은 의미로 뒤에 추가
 $("추가할 내용").appendTo("추가할곳")
 
+==============
+$(function () {
+  //   $(".pre").on("click", function () {
+  //     $("div").prepend(`<p>123</p>`);
+  //   });
+
+  //   $(".app").on("click", function () {
+  //     $("div").append(`<p>치이카와</p>`);
+  //   });
+
+  $(".pre").on("click", function () {
+    $(`<p>앞으로</p>`).prependTo("div");
+  });
+  $(".app").on("click", function () {
+    $(`<p>뒤로</p>`).appendTo("div");
+  });
+});
 -->

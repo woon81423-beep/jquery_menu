@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <h2>10</h2>
+    <script>
+      let i = 10;
+      setTimeout(function () {
+        setInterval(function () {
+          if (i < 1) {
+            $("h2").text(`타임아웃`);
+          } else {
+            i = i - 1;
+            $("h2").text(`${i}`);
+          }
+        }, 500);
+      }, 3000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <button>더하기</button>
+    <div></div>
+    
+    <script>
+        
+      function go(a, b){
+        re01 = a + b;
+        re02 = a - b;
+        re03 = a % b;
+        re04 = a * b;
+        $("div").text(`덧셈${re01}, 뺄셈${re02}, 나눗셈${re03}, 곱셈${re04}`)
+      }
+      $("button").on("click",function(){
+        go( 10 , 5);
+      })
+
+    </script>
+  </body>
+</html>
+<!--
+
+-->

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <div>box</div>
+    <script>
+      $("div").on("click", function () {
+        $("div").animate({ "background-color": "red" });
+      });
+    </script>
+  </body>
+</html>

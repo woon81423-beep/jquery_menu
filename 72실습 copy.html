@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-4.0.0.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <button>멈춤</button>
+
+    <script>
+      $(function () {
+        let i = 0;
+        let stop = setInterval(function () {
+          if (i == 3) {
+            i = 0;
+          } else {
+            i = i + 1;
+            console.log(i);
+          }
+        }, 1000);
+        $("button").on("click",function(){
+          clearInterval(stop);
+        })
+      });
+    </script>
+  </body>
+</html>
+<!--
+$(function () {
+  let num = 0;
+  let stop = setInterval(function () {
+    if (num == 5) {
+      num = 1;
+    } else {
+      num = num + 1;
+    }
+    console.log(num);
+  }, 1000);
+
+  $("button").on("click", function () {
+    clearInterval(stop);
+  });
+});
+
+-->

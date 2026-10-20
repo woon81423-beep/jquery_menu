@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <h2 class="count">0</h2>
+    <button class="stop">정지</button>
+    <script>
+      let i = 0;
+      let stop = setInterval(function () {
+        i = i + 1;
+        $(".count").text(i);
+      }, 1000);
+
+      $("button").on("click", function () {
+        clearInterval(stop);
+      });
+    </script>
+  </body>
+</html>
+<!--
+*setinterval로 제작하는 것:
+1초마다 숫자가 1씩 증가됨.
+정지버튼을 클릭하면 정지
+
+>자동으로 증가가 됨 ->setinterval
+ 변수안에 숫자를 담음
+ setinterval안의 숫자를 1씩 증가
+ 반복하는 내용만 안으로 들어옴
+ 증가한 숫자를 count 에 text로 보이게 함
+-->

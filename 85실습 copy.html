@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      div {
+        width: 200px;
+        height: 100px;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <button>빨강</button>
+    <button>토마토</button>
+    <button>오렌지</button>
+    <div></div>
+    <script>
+      //  function wrap01(){
+      //   $("div").css({"background-color":"red"})
+      //  }
+      //  function wrap02(){
+      //   $("div").css({"background-color":"green"})
+      //  }
+      //  function wrap03(){
+      //   $("div").css({"background-color":"orange"})
+      //  }
+      //  $("button:nth-of-type(1)").on("click",function(){
+      //   wrap01();
+      //  })
+      //  $("button:nth-of-type(2)").on("click",function(){
+      //   wrap02();
+      //  })
+      //  $("button:nth-of-type(3)").on("click",function(){
+      //   wrap03();
+      //  })
+
+      $("button")
+        .eq(0)
+        .on("click", function () {
+          wrap("red");
+        });
+      $("button")
+        .eq(1)
+        .on("click", function () {
+          wrap("blue");
+        });
+      $("button")
+        .eq(2)
+        .on("click", function () {
+          wrap("orange");
+        });
+      function wrap(color) {
+        $("div").css({ "background-color": color });
+      }
+    </script>
+  </body>
+</html>
+<!--함수를 만들어서 
+빨강버튼을 클릭하면 배경색이 빨강
+   함수를 호출할때는 ""가 들어가지 않음.
+   숫자도 안들어감
+   
+-->

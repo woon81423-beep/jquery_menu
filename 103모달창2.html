@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        word-break: keep-all;
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      ul img {
+        width: 100%;
+      }
+      ul li {
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      ul li:hover {
+        transform: scale(1.1);
+      }
+      body {
+        position: relative;
+        background-color: orange;
+      }
+      .total {
+        width: 80vw;
+        height: 90vh;
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px auto;
+      }
+   
+    
+      /*모달*/
+      .bg {
+        background-color: rgba(32, 25, 25, 0.7);
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        margin: 0px auto;
+        display: none;
+      }
+      
+      button {
+        text-align: right;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 2px 5px;
+        /* background-color: none; */
+      }
+      
+      
+      .bg.on {
+        display: block; /* .on이 붙으면 표시 */
+      }
+      .modal_01,
+      .modal_02,
+      .modal_03 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="total">
+      <ul>
+        <li><img src="img/pic1.jpg" alt="" /></li>
+        <li><img src="img/pic2.jpg" alt="" /></li>
+        <li><img src="img/pic3.jpg" alt="" /></li>
+      </ul>
+      <div class="good">
+        <div class="bg">
+          <div class="modal_01">
+            <button>X</button>
+            <div><img src="img/pic1.jpg" alt="" /></div>
+          </div>
+        </div>
+        <div class="bg">
+          <div class="modal_01">
+            <button>X</button>
+            <div><img src="img/pic2.jpg" alt="" /></div>
+          </div>
+        </div>
+        <div class="bg">
+          <div class="modal_01">
+            <button>X</button>
+            <div><img src="img/pic3.jpg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $("ul li").on("click", function () {
+        let i = $(this).index();
+        $(".good > div").removeClass("on");
+        $(".good > div").eq(i).addClass("on");
+      });
+      $("button").on("click", function () {
+        $(".good > div").removeClass("on");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <h2 class="count">0</h2>
+
+    <script>
+      let i = 0;
+      let stop = setInterval(function () {
+        
+        $(".count").text(i);
+        if (i > 999) {
+          clearInterval(stop);
+        }else{
+          i = i + 33;
+        }
+      }, 100);
+    </script>
+  </body>
+</html>
+<!--
+*setinterval로 제작하는 것:
+1초마다 숫자가 33씩 증가됨.
+정지버튼을 클릭하면 정지
+
+>숫자가 999이 되면 정지시킴
+-->

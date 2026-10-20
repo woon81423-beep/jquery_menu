@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/101.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        word-break: keep-all;
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+      }
+
+      /*visual*/
+
+      #visual {
+        width: 100vw;
+        height: 30vh;
+        position: relative;
+      }
+      #visual .on {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #visual .on:nth-of-type(1) {
+        background-color: orange;
+        z-index: 1;
+      }
+      #visual .on:nth-of-type(2) {
+        background-color: turquoise;
+        /* display: none; */
+      }
+      #visual .on:nth-of-type(3) {
+        background-color: tomato;
+        /* display: none; */
+      }
+      /*container*/
+
+      #container {
+        width: 100vw;
+        margin: 30px auto;
+      }
+      #container .tap {
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgb(56, 119, 255);
+      }
+      /*누르면 작동하는 메뉴*/
+      #container .tap li {
+        width: 100px;
+        /* background-color: aqua; */
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+      #container .tap li.view {
+        border-top: 5px solid rgb(56, 119, 255);
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
+        border-bottom: transparent;
+        margin-top: -5px;
+        margin-bottom: -1px;
+      }
+
+      #container .tap li:nth-of-type(1).view {
+        background-color: orange;
+      }
+      #container .tap li:nth-of-type(2).view {
+        background-color: turquoise;
+        /* display: none; */
+      }
+      #container .tap li:nth-of-type(3).view {
+        background-color: tomato;
+        /* display: none; */
+      }
+      .view {
+        z-index: 2;
+      }
+      /* .view01 {
+        background-color: orange;
+      }
+      .view02 {
+        background-color: turquoise;
+      }
+      .view03 {
+        background-color: tomato;
+      } */
+
+      /*메뉴아래*/
+
+      #container .txt {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+      }
+      #container .txt .down {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #container .txt .down:nth-of-type(1) {
+        background-color: orange;
+        z-index: 1;
+      }
+      #container .txt .down:nth-of-type(2) {
+        background-color: turquoise;
+        /* display: none; */
+      }
+      #container .txt .down:nth-of-type(3) {
+        background-color: tomato;
+        /* display: none; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="visual">
+      <section class="on">
+        <h2>MENU1</h2>
+        <p>상품설명입니다</p>
+      </section>
+      <section class="on">
+        <h2>MENU2</h2>
+        <p>상품설명입니다</p>
+      </section>
+      <section class="on">
+        <h2>MENU3</h2>
+        <p>상품설명입니다</p>
+      </section>
+    </div>
+    <div id="container">
+      <ul class="tap">
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+      </ul>
+      <div class="txt">
+        <section class="down">
+          <p>상품설명입니다 MENU1</p>
+        </section>
+        <section class="down">
+          <p>상품설명입니다 MENU2</p>
+        </section>
+        <section class="down">
+          <p>상품설명입니다 MENU3</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

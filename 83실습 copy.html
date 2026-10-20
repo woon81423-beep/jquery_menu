@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        position: relative; /*현재를 기준으로 움직이고 싶을 때 relative사용(나를 기준으로)*/
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn01">이동</button>
+    <button class="btn02">배경색</button>
+    <div class="box"></div>
+    <script>
+      function go() {
+        $(".box").animate({ "left": "300px" });
+      }
+      function gogo() {
+        $(".box").css({ "background-color": "red" });
+      }
+      $(".btn01").on("click", function () {
+        go();
+      });
+      $(".btn02").on("click", function () {
+        gogo();
+      });
+    </script>
+  </body>
+</html>

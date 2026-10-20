@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="js/jquery-4.0.0.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).on("mousemove",function(e){
+            console.log(`x좌표 ${e.clientX} y좌표 ${e.clientY}`)
+        })
+    </script>
+</body>
+</html>
+<!--
+*마우스 좌표
+clientX :: 브라우저 왼쪽 화면 모서리부터 마우스까지의 가로 좌표(px)
+clientY::브라우저 위쪽 화면 모서리부터 마우스까지의 세로 좌표(px)
+-->

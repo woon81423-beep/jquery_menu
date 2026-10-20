@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+
+    <style>
+      * {
+        background-color: black;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+      }
+      ul {
+        list-style: none;
+        width: 200px;
+        height: 70px;
+        /* overflow: hidden; */
+        /* margin:0px auto; */
+      }
+      li {
+        width: 190px;
+        height: 70px;
+        /* display:none; */
+        object-fit: cover;
+        position: absolute;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        margin: 0px 10px;
+      }
+      div {
+        font-size: 2rem;
+        display: flex;
+        color: #fff;
+        font-weight: 800;
+        margin: 30px;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      나,
+      <ul>
+        <li><img src="img/random_name07@2x.png" alt="" /></li>
+        <li><img src="img/random_name08@2x.png" alt="" /></li>
+        <li><img src="img/random_name09@2x.png" alt="" /></li>
+        <li><img src="img/random_name10@2x.png" alt="" /></li>
+        <li><img src="img/random_name11@2x.png" alt="" /></li>
+      </ul>
+      은/는
+    </div>
+    <div>전세계 어린이와 함께하는 유니세프 팀입니다.</div>
+  </body>
+  <script>
+    let total = $("li").length;
+    let i = 0;
+    
+    setInterval(function () {
+      $("li").stop().animate({ opacity: "0" },300);
+      if (i == total - 1) {
+        i = 0;
+      } else {
+        i = i + 1;
+      }console.log(i);
+      $("li").eq(i).stop().animate({ opacity: "1" },300);
+    },1000);
+  </script>
+</html>
