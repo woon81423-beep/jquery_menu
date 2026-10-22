@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        word-break: keep-all;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        overflow: hidden;
+      }
+      .wrap {
+        width: 300vw;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        position: relative;
+      }
+      h2 {
+        margin-bottom: 50px;
+      }
+      .txt {
+        width: 100%;
+        display: flex;
+      }
+      .txt img {
+        width: 100%;
+      }
+      .wrap > div {
+        width: 100vw;
+        color: #fff;
+        font-size: 30px;
+        position: relative;
+        /* padding: 100px; */
+        overflow-x: hidden;
+      }
+      .wrap > div:nth-of-type(1) {
+        display: block;
+      }
+      .wrap01 h2 span {
+        background-color: blue;
+      }
+      .wrap02 h2 span {
+        background-color: red;
+      }
+      .wrap03 h2 span {
+        background-color: blueviolet;
+      }
+      .wrap01 .txt01 {
+        width: 100%;
+        color: blue;
+        background-color: #fff;
+        padding: 20px;
+        position: relative;
+        margin-top: 60px;
+        margin-left: -40px;
+      }
+      .wrap02 .txt02 {
+        width: 100%;
+        color: red;
+        background-color: #fff;
+        padding: 20px;
+        position: relative;
+        margin-top: 60px;
+        margin-left: -40px;
+      }
+      .wrap03 .txt03 {
+        width: 100%;
+        color: blueviolet;
+        background-color: #fff;
+        padding: 20px;
+        position: relative;
+        margin-top: 60px;
+        margin-left: -40px;
+      }
+      .wrap01 .txt01 p:nth-of-type(2) {
+        font-size: 50px;
+        font-weight: bold;
+        padding-top: 200px;
+      }
+      .wrap02 .txt02 p:nth-of-type(2) {
+        font-size: 50px;
+        font-weight: bold;
+        padding-top: 200px;
+      }
+      .wrap03 .txt03 p:nth-of-type(2) {
+        font-size: 50px;
+        font-weight: bold;
+        padding-top: 200px;
+      }
+      .wrap01 .txt01 p:nth-of-type(1) {
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: bold;
+        position: absolute;
+        right: 20px;
+        top: 30%;
+      }
+      .wrap02 .txt02 p:nth-of-type(1) {
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: bold;
+        position: absolute;
+        right: 20px;
+        top: 30%;
+      }
+      .wrap03 .txt03 p:nth-of-type(1) {
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: bold;
+        position: absolute;
+        right: 20px;
+        top: 30%;
+      }
+      .wrap01 .txt01 p:nth-of-type(2) span {
+        font-size: 150px;
+        font-weight: bold;
+        letter-spacing: -10px;
+      }
+      .wrap02 .txt02 p:nth-of-type(2) span {
+        font-size: 150px;
+        font-weight: bold;
+        letter-spacing: -10px;
+      }
+      .wrap03 .txt03 p:nth-of-type(2) span {
+        font-size: 150px;
+        font-weight: bold;
+        letter-spacing: -10px;
+      }
+      .arr {
+        width: 100%;
+        font-size: 50px;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 10;
+        position: fixed;
+        /* pointer-events: none; */
+      }
+
+      .prev,
+      .next {
+        cursor: pointer;
+        /* pointer-events: auto; */
+      }
+
+      /*내비게이션*/
+      .navi {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+
+        position: absolute;
+        bottom: 20px;
+        position: fixed;
+      }
+      .navi li {
+        width: 10px;
+        height: 10px;
+        background-color: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .navi li.on {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="wrap01">
+        <h2>
+          유니세프 팀에 합류한 당신이 지킬 수 있는<br />
+          <span>학교에 다니지 못하는 어린이</span>
+        </h2>
+        <div class="txt">
+          <img src="img/img/KakaoTalk_20261020_123625221.jpg" alt="" />
+          <div class="txt01">
+            <h3>
+              학교에 다니지 못하는<br />
+              취학 연령 어린이
+            </h3>
+            <p>
+              아직도 전세계에 취학 연령 어린이 6,400만 명이<br />학교에 다니지
+              못하고 있습니다.코로나 팩데믹 이후<br />저중소득 국가의 학습
+              빈곤률이 약 70%까지<br />높아진 상황입니다.
+            </p>
+            <p><span>2600</span>만명</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrap02">
+        <h2>
+          유니세프 팀에 합류한 당신이 지킬 수 있는<br />
+          <span>학교에 다니지 못하는 어린이</span>
+        </h2>
+        <div class="txt">
+          <img src="img/img/KakaoTalk_20261020_123625221_01.jpg" alt="" />
+          <div class="txt02">
+            <h3>
+              학교에 다니지 못하는<br />
+              취학 연령 어린이
+            </h3>
+            <p>
+              아직도 전세계에 취학 연령 어린이 6,400만 명이<br />학교에 다니지
+              못하고 있습니다.코로나 팩데믹 이후<br />저중소득 국가의 학습
+              빈곤률이 약 70%까지<br />높아진 상황입니다.
+            </p>
+            <p><span>2600</span>만명</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrap03">
+        <h2>
+          유니세프 팀에 합류한 당신이 지킬 수 있는<br />
+          <span>학교에 다니지 못하는 어린이</span>
+        </h2>
+        <div class="txt">
+          <img src="img/img/KakaoTalk_20261020_123625221_02.jpg" alt="" />
+          <div class="txt03">
+            <h3>
+              학교에 다니지 못하는<br />
+              취학 연령 어린이
+            </h3>
+            <p>
+              아직도 전세계에 취학 연령 어린이 6,400만 명이<br />학교에 다니지
+              못하고 있습니다.코로나 팩데믹 이후<br />저중소득 국가의 학습
+              빈곤률이 약 70%까지<br />높아진 상황입니다.
+            </p>
+            <p><span>2600</span>만명</p>
+          </div>
+        </div>
+      </div>
+      <ul class="arr">
+        <li class="prev"><i class="fa-solid fa-chevron-left"></i></li>
+        <li class="next"><i class="fa-solid fa-chevron-right"></i></li>
+      </ul>
+      <ul class="navi">
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <script>
+      let i = 0; //제이쿼리 시작 순서
+      let total = $(".wrap > div").length; //3개
+
+      let stop;
+
+      // 네비바 클래스 상태를 업데이트하는 함수
+      function navi() {
+        $(".navi li").removeClass("on");
+        $(".navi li").eq(i).addClass("on");
+      }
+      start();
+      function start() {
+        stop = setInterval(function () {
+          $(".wrap > div")
+            .first()
+            .stop()
+            .animate({ "margin-left": "-100vw" }, 1000, function () {
+              $(".wrap > div").first().appendTo(".wrap");
+              $(".wrap > div").css({ "margin-left": "0vw" });
+              i = (i + 1) % total; //1.현재 슬라이드 번호를 1증가
+              //2.전체 슬라이드 개수로 나눈 나머지 구하기
+              /*0	(0 + 1) % 3	1
+                1	(1 + 1) % 3	2
+                2	(2 + 1) % 3	0
+                0	(0 + 1) % 3	1*/
+              navi();
+            });
+        }, 2000);
+      }
+
+      $(".next").on("click", function () {
+        //다음버튼을 클릭하면
+        clearInterval(stop);
+
+        $(".wrap > div") //첫번째 슬라이드를 왼쪽으로 -100% 보냄
+          .stop()
+          .first()
+          .animate({ "margin-left": "-100vw" }, 1000, function () {
+            $(".wrap > div").first().appendTo(".wrap"); //보낸 슬라이드를 wrap뒤로 보냄
+            $(".wrap > div").css({ "margin-left": "0px" });
+            i = (i + 1) % total;
+            navi();
+
+            start(); //다음 슬라이드도 동일하게 동작되도록 위치 초기화
+          });
+      });
+      $(".prev").on("click", function () {
+        //이전버튼을 클릭하면
+        clearInterval(stop);
+        $(".wrap > div").last().prependTo(".wrap"); //마지막 슬라이드를 맨앞으로 보냄
+        $(".wrap > div").stop().first().css({ "margin-left": "-100vw" }); //맨 앞으로 보낸 슬라이드를 왼쪽으로 -100% 위치에 둔 다음
+
+        $(".wrap > div").first().animate({ "margin-left": "0px" }, 1000); ////맨 앞으로 보낸 슬라이드를 원래 자리로 보여지도록
+        i = (i - 1 + total) % total;
+        navi();
+        start();
+      });
+      /*네비버튼*/
+      $(".navi li").on("click", function () {
+        i = 0;
+        clearInterval(stop);
+        i = $(this).index();
+
+        // $(".wrap > div").eq(i).prependTo(".wrap"); //해당슬라이드를 맨 앞으로 이동
+        $(".wrap > div")
+          .stop()
+          .animate({ "margin-left": `${i * -100}vw` });
+
+        navi();
+        start();
+      });
+    </script>
+  </body>
+</html>

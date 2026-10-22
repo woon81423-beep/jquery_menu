@@ -1,0 +1,266 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  word-break: keep-all;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+/*header*/
+header {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  z-index: 10;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+}
+header li {
+  width: calc(100% / 4);
+  text-align: center;
+}
+header li:hover {
+  background-color: #fff;
+  color: #000;
+}
+header a {
+  width: 100%;
+  display: inline-block;
+  padding: 1rem;
+}
+/*container*/
+#container {
+  width: 100%;
+  position: fixed;
+}
+#container section {
+  width: 100%;
+  height: 100vh;
+}
+#container .page01 {
+  background-color: lightsalmon;
+}
+#container .page02 {
+  /* background-color: lightseagreen; */
+}
+#container .page03 {
+  /* background-color: lightgreen; */
+}
+#container .page04 {
+  background-color: rgb(60, 60, 228);
+}
+/*h2*/
+#container h2 {
+  text-align: center;
+  height: 100%;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*section01 왼쪽*/
+.page01 {
+  display: flex;
+}
+.page01 > div {
+  width: calc(100% / 2);
+}
+.page01 .sec01_left {
+  background-color: lightblue;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.page01 .sec01_left ul img {
+  width: 100%;
+}
+.page01 .sec01_left h3 {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  text-decoration: underline;
+}
+.page01 .sec01_left h4 {
+  margin: 2rem 0px 0px;
+  font-size: clamp(2rem, 2vw, 4rem);
+  font-weight: 400;
+}
+.page01 .sec01_left p {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  margin: 0px 0px 3rem;
+  font-weight: 700;
+}
+.page01 .sec01_left ul {
+  display: flex;
+  gap: 1rem;
+}
+/*section01 오른쪽*/
+
+.page01 .sec01_right {
+  background-color: #fff;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.page01 .logo {
+  margin-top: 15rem;
+  width: 6rem;
+}
+.page01 .sec01_right ul {
+  display: grid;
+  grid-template-columns: 230px 2fr;
+  /* gap:10px; */
+  margin-top: 30px;
+  /* row-gap: 30px; */
+}
+.page01 .sec01_right ul li {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  border-bottom: 1px solid #888;
+  font-weight: 700;
+  padding: 15px;
+}
+/* @media(max-width:768px)
+{#container {
+  width: 100%;
+  position: none;
+}
+
+  .page01{
+    flex-direction: column;
+  }
+  .page01 > div{
+    width:100%;
+  }
+} */
+/*section02 왼쪽*/
+.page02 {
+  display: flex;
+  padding: 5rem;
+  gap: 5rem;
+}
+.page02 .sec02_left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page02 .box {
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 20px;
+}
+.page02 .box h3 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+.page02 .box h4 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 700;
+}
+.page02 .nobox {
+  padding: 20px;
+}
+.page02 h5 {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+.page02 .txt01 {
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
+  margin: 20px 0px 50px;
+  font-weight: 500;
+}
+.page02 .txt02 {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  font-weight: 700;
+}
+
+/*섹션02 오른쪽*/
+.page02 .sec02_right {
+  width: 40%;
+}
+
+.page02 .sec02_right img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid #444;
+  object-fit: cover;
+}
+
+/*섹션03*/
+.page03 {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.page03 .bg {
+  background-color: #ccc;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  left: 0px;
+  top: auto;
+  z-index: -1;
+}
+.page03 h3 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: clamp(2rem, 2vw, 3rem);
+}
+
+.page03 > div {
+  text-align: right;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 700;
+}
+.page03 ul {
+  display: flex;
+  gap: 1rem;
+  margin: 20px auto;
+  width: 100%;
+}
+.page03 ul li {
+  width: calc(100% / 3);
+  height: 30vh;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  text-align: center;
+}
+.page03 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*섹션4*/
+.page04 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  gap: 5px;
+}
+.page04 h3 {
+  font-size: clamp(4rem, 5vw, 7rem);
+  /* text-decoration: underline; */
+  padding: 10px;
+  width: fit-content;
+  border-bottom: 1px solid #fff;
+  margin: 0px auto;
+}
+.page04 p {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+}
+.page04 p:nth-of-type(1) {
+  margin: 20px;
+}

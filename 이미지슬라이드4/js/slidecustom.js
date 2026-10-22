@@ -73,7 +73,7 @@ $(function () {
     i = $(this).index();
     $(".panel")
       .stop()
-      .animate({ "margin-left": "-2000px;"});
+      .animate({ "margin-left": `${-500*i}`});
     navi();
     start();
   });
